@@ -16,9 +16,11 @@ public class ThePanel extends JPanel implements Serializable, ActionListener {
         JButton yesButton = new JButton("YES");
         add(yesButton);
         yesButton.addActionListener(this);
+        
         JButton noButton = new JButton("NO");
         add(noButton);
         noButton.addActionListener(this);
+        
         JButton quitButton = new JButton("QUIT");
         add(quitButton);
         quitButton.addActionListener(this);
@@ -34,12 +36,8 @@ public class ThePanel extends JPanel implements Serializable, ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         String command = e.getActionCommand();
-        if (command.equals("YES")) {
-            System.out.println("Yes!");
-        } else if (command.equals("NO")) {
-            System.out.println("No!");
-        } else if (command.equals("QUIT")) {
-            System.out.println("Quit!");
+        System.out.println(command);
+        if (command.equals("QUIT")) {
             System.exit(0);
         }
     }
